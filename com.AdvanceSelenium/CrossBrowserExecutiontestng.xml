@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Suite">
+  <test thread-count="5" name="Testrunner1">
+  	<parameter name="BROWSER" value="edge"></parameter>
+    <parameter name="URL" value="http://localhost:8888/index.php"></parameter>
+  	<parameter name="USERNAME" value="admin"></parameter>
+    <parameter name="PASSWORD" value="admin"></parameter>
+    <classes>
+      <class name="vTigerCampaign.OptimizedCreateCampaignPgTest"/>
+       </classes>
+  </test> <!-- Test -->
+  
+  <test name="Testrunner2">
+  	<parameter name="BROWSER" value="chrome"></parameter>
+    <parameter name="URL" value="http://localhost:8888/index.php"></parameter>
+  	<parameter name="USERNAME" value="admin"></parameter>
+    <parameter name="PASSWORD" value="admin"></parameter>
+    <classes>
+      <class name="vTigerContact.CreateContactTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="tests" name="Testrunner2(failed)">
+    <parameter name="BROWSER" value="chrome"/>
+    <parameter name="PASSWORD" value="admin"/>
+    <parameter name="USERNAME" value="admin"/>
+    <parameter name="URL" value="http://localhost:8888/index.php"/>
+    <classes>
+      <class name="vTigerContact.CreateContactTest">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="beforeMethod"/>
+          <include name="afterClass"/>
+          <include name="beforeSuite"/>
+          <include name="afterTest"/>
+          <include name="createContact"/>
+          <include name="beforeTest"/>
+          <include name="afterMethod"/>
+          <include name="afterSuite"/>
+        </methods>
+      </class> <!-- vTigerContact.CreateContactTest -->
+    </classes>
+  </test> <!-- Testrunner2(failed) -->
+  <test thread-count="5" parallel="tests" name="Testrunner1(failed)">
+    <parameter name="BROWSER" value="edge"/>
+    <parameter name="PASSWORD" value="admin"/>
+    <parameter name="USERNAME" value="admin"/>
+    <parameter name="URL" value="http://localhost:8888/index.php"/>
+    <classes>
+      <class name="vTigerCampaign.OptimizedCreateCampaignPgTest">
+        <methods>
+          <include name="optimizedCreateCampaignPg"/>
+          <include name="beforeClass"/>
+          <include name="beforeMethod"/>
+          <include name="afterClass"/>
+          <include name="beforeSuite"/>
+          <include name="afterTest"/>
+          <include name="beforeTest"/>
+          <include name="afterMethod"/>
+          <include name="afterSuite"/>
+        </methods>
+      </class> <!-- vTigerCampaign.OptimizedCreateCampaignPgTest -->
+    </classes>
+  </test> <!-- Testrunner1(failed) -->
+</suite> <!-- Failed suite [Suite] -->
